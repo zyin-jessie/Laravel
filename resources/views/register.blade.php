@@ -12,87 +12,44 @@
                     <div class="d-flex justify-content-between">
                         <div class="mb-2 me-2 w-50">
                             <label class="form-label">First Name</label>
-                            <input
-                                type="text"
-                                name="firstName"
-                                value="{{ old('firstName') }}"
-                                class="form-control @error('firstName') is-invalid @enderror">
-                            @error('firstName')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                            <input type="text" name="firstName" value="{{ old('firstName') }}" class="form-control @error('firstName') is-invalid @enderror">
+                            @error('firstName')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                         <div class="mb-2 w-50">
                             <label class="form-label">Last Name</label>
-                            <input
-                                type="text"
-                                name="lastName"
-                                value="{{ old('lastName') }}"
-                                class="form-control @error('lastName') is-invalid @enderror">
-                            @error('lastName')
-                                <div class="invalid-feedback">{{ $message }}</div>
-                            @enderror
+                            <input type="text" name="lastName" value="{{ old('lastName') }}" class="form-control @error('lastName') is-invalid @enderror">
+                            @error('lastName')<div class="invalid-feedback">{{ $message }}</div>@enderror
                         </div>
                     </div>
 
                     <div class="mb-2">
                         <label class="form-label">Middle Initial (optional)</label>
-                        <input
-                            type="text"
-                            name="middleInitial"
-                            value="{{ old('middleInitial') }}"
-                            class="form-control @error('middleInitial') is-invalid @enderror">
-                        @error('middleInitial')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
+                        <input type="text" name="middleInitial" value="{{ old('middleInitial') }}" class="form-control @error('middleInitial') is-invalid @enderror">
+                        @error('middleInitial')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
                     <div class="mb-2">
                         <label class="form-label">Email</label>
-                        <input
-                            type="email"
-                            name="email"
-                            value="{{ old('email') }}"
-                            class="form-control @error('email') is-invalid @enderror">
-                        @error('email')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
+                        <input type="email" name="email" value="{{ old('email') }}" class="form-control @error('email') is-invalid @enderror">
+                        @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
                     <div class="mb-2">
                         <label class="form-label">Password</label>
-                        <input
-                            type="password"
-                            name="password"
-                            required
-                            value="{{ old('password') }}"
-                            class="form-control @error('password') is-invalid @enderror">
-                        @error('password')
-                            <div class="invalid-feedback text-xs">{{ $message }}</div>
-                        @enderror
+                        <input type="password" name="password" value="{{ old('password') }}" class="form-control @error('password') is-invalid @enderror">
+                        @error('password')<div class="invalid-feedback text-xs">{{ $message }}</div>@enderror
                     </div>
 
                     <div class="mb-2">
                         <label class="form-label">Confirm Password</label>
-                        <input
-                            type="password"
-                            name="confirm_password"
-                            value="{{ old('confirm_password') }}"
-                            class="form-control @error('confirm_password') is-invalid @enderror">
-                        @error('confirm_password')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
+                        <input type="password" name="confirm_password" value="{{ old('confirm_password') }}" class="form-control @error('confirm_password') is-invalid @enderror">
+                        @error('confirm_password')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
                     <div class="mb-2">
                         <label class="form-label">Contact Number</label>
-                        <input
-                            type="text"
-                            name="contact"
-                            value="{{ old('contact') }}"
-                            class="form-control @error('contact') is-invalid @enderror">
-                        @error('contact')
-                            <div class="invalid-feedback">{{ $message }}</div>
-                        @enderror
+                        <input type="text" name="contact" value="{{ old('contact') }}" class="form-control @error('contact') is-invalid @enderror">
+                        @error('contact')<div class="invalid-feedback">{{ $message }}</div>@enderror
                     </div>
 
                     <div class="mb-2">
