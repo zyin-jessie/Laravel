@@ -2,7 +2,7 @@
 
 @section('content_here')
 
-<div class="row mt-5 justify-content-center">
+<div class="d-flex justify-content-center">
     <div class="col-md-4">
        <h2 class="mb-4">Register</h2>
         <div class="card">

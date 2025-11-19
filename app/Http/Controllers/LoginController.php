@@ -39,10 +39,10 @@ class LoginController extends Controller
         [
             'name.required' => 'Attention: Username is required to continue!',
             'name.alpha' => 'Attention: Username accept letters only to continue!',
-            'email.required' => 'Attention: Valid email is required to continue!'
+            // 'email.required' => 'Attention: Valid email is required to continue!'
         ]);
 
-        $accounts = $request->only(['name', 'email', 'password']);
+        $accounts = $request->only(['email', 'password']);
 
         return view('dashboard', compact('accounts'));
 
