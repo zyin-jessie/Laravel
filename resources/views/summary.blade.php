@@ -14,10 +14,23 @@
                 <th>Contact</th>
                 <th>College</th>
                 <th>Program</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
-            <tr>
+            @foreach ($summary as $student)
+                <tr>
+                    <td>{{ $student->first_name }}</td>
+                    <td>{{ $student->last_name }}</td>
+                    <td>{{ $student->middle_initial }}</td>
+                    <td>{{ $student->email }}</td>
+                    <td>{{ $student->contact }}</td>
+                    <td>{{ $student->college }}</td>
+                    <td>{{ $student->program }}</td>
+                    
+                </tr>
+            @endforeach
+            {{-- <tr>
                 <td>{{ $summary['firstName'] }}</td>
                 <td>{{ $summary['lastName'] }}</td>
                 <td>{{ $summary['middleInitial'] }}</td>
@@ -25,7 +38,7 @@
                 <td>{{ $summary['contact'] }}</td>
                 <td>{{ $summary['college'] }}</td>
                 <td>{{ $summary['program'] }}</td>
-            </tr>
+            </tr> --}}
         </tbody>
     </table>
 

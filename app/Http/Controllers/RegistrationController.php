@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
+use App\Models\Student;
 
 class RegistrationController extends Controller
 {
@@ -64,15 +66,28 @@ class RegistrationController extends Controller
             'confirm_password.same' => 'Password does not match.'
         ]);
 
-        $summary = $request->only([
-            'firstName',
-            'lastName',
-            'middleInitial',
-            'email',
-            'contact',
-            'college',
-            'program'
+        Student::create([
+            'first_name'     => $request->firstName,
+            'last_name'      => $request->lastName,
+            'middle_initial' => $request->middleInitial,
+            'email'          => $request->email,
+            'password'       => Hash::make($request->password),
+            'contact'        => $request->contact,
+            'college'        => $request->college,
+            'program'        => $request->program,
         ]);
+
+        // $summary = [
+        //     'firstName'     => $request->firstName,
+        //     'lastName'      => $request->lastName,
+        //     'middleInitial' => $request->middleInitial,
+        //     'email'         => $request->email,
+        //     'contact'       => $request->contact,
+        //     'college'       => $request->college,
+        //     'program'       => $request->program,
+        // ];
+
+        $summary = Student::all();
 
         return view('summary', compact('summary'));
     }
